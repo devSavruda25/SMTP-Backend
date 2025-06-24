@@ -26,7 +26,7 @@ exports.employeeLogin = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { id: employee._id, role: 'employee' },
+      { id: employee._id.toString(), role: 'employee' },
       process.env.JWT_SECRET_EMP,
       { expiresIn: '24h' }
     );

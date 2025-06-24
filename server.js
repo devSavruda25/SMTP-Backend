@@ -7,13 +7,13 @@ const chalk = require('chalk');
 const authRoutes = require('./routes/authRoutes');
 const emailRoutes = require('./routes/emailRoutes');
 const employeeAuthRoutes = require('./routes/employeeAuth');
-
+const empbyid = require('./routes/employeeRoutes')
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
-app.use('/api/employee', employeeAuthRoutes); // 👈 Employee login route
+app.use('/api/employee', employeeAuthRoutes,empbyid); // 👈 Employee login route
 app.use('/api/email', emailRoutes);
 app.use('/uploads', express.static('uploads'));
 

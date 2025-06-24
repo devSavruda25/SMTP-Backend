@@ -9,7 +9,7 @@ async function createAdmin() {
 
   const hashedPassword = bcrypt.hashSync('admin123', 10); // you can change password
   const admin = new Admin({
-    email: 'admin1@example.com', // your login email
+    email: 'prathamesh0755@gmail.com', // your login email
     password: hashedPassword,
   });
 
